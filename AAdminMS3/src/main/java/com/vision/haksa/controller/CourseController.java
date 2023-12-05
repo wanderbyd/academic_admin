@@ -32,11 +32,7 @@ public class CourseController {
 		this.lectureRoomService = lectureRoomService;
 	}
 
-//	@GetMapping("")
-//	public String listCourses(Model model) {
-//		model.addAttribute("courses", courseService.getAllCourses());
-//		return "/course/list";
-//	}
+
 
 	@GetMapping("")
 	public String listCourses(Model model, @RequestParam(name = "sortBy", required = false) String sortBy) {
@@ -154,7 +150,7 @@ public class CourseController {
 		}
 		return "success";
 
-		// return "redirect:/courses";
+		
 	}
 
 	@GetMapping("/edit/{coursecode}")

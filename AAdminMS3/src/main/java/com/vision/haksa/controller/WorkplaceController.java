@@ -28,11 +28,6 @@ public class WorkplaceController {
         this.workplaceService = workplaceService;
     }
 
-//    @GetMapping("")
-//    public String listWorkplaces(Model model) {
-//        model.addAttribute("workplaces", workplaceService.getAllWorkplaces());
-//        return "/workplace/list";
-//    }
     
     @GetMapping("")
 	public String listWorkplaces(Model model, @RequestParam(name = "sortBy", required = false) String sortBy) {
@@ -87,7 +82,7 @@ public class WorkplaceController {
         // model.addAttribute("student", new Student());
         return "workplace/form"; 
     }
-//
+
 
         
     @GetMapping("/edit/{businessregistrationnumber}")
@@ -107,7 +102,7 @@ public class WorkplaceController {
 			workplaceService.saveWorkplace(workplace);
 			model.addAttribute("successMessage", "success!");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 			model.addAttribute("successMessage", "fail, retry!");
 		}

@@ -15,8 +15,5 @@ public class MainController {
     public String erd() {
         return "erd";
     }
-//    @GetMapping("/erd2")
-//    public String erd2() {
-//        return "erd2";
-//    }
+
 }

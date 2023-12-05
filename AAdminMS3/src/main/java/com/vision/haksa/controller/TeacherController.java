@@ -67,7 +67,7 @@ public class TeacherController {
     public String viewTeacher(@PathVariable String teacherid, Model model) {
         Teacher teacher = teacherService.getTeacherById(teacherid);
         if (teacher == null) {
-            // 선생님을 찾을 수 없는 경우 처리
+   
             return "error"; // 에러 페이지로 리다이렉트 또는 처리
         }
         model.addAttribute("teacher", teacher);
@@ -76,7 +76,7 @@ public class TeacherController {
 
     @GetMapping("/add")
     public String createTeacherForm(Model model) {
-        // model.addAttribute("teacher", new Teacher());
+      
         return "teacher/form"; // teacher/form.html에 대한 뷰로 이동
     }
 

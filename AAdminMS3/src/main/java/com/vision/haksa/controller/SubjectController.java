@@ -63,9 +63,6 @@ public class SubjectController {
 	}
         
         
-//        model.addAttribute("subjects", subjectService.getAllSubjects());
-//        return "/subject/list";
-//    }
 
     @GetMapping("/{subjectcode}")
     public String viewSubject(@PathVariable String subjectcode, Model model) {
